@@ -10,7 +10,7 @@ $machine_image  = "ubuntu/focal64"
 
 $machine_name   = "ubuntu01"
 $machine_memory = "2048"
-$machine_cpus   = "4"
+$machine_cpus   = "2"
 $machine_ip     = "10.10.10.143"
 $vb_group       = "/MS-SQL-Express-Lab"
 $mssqlpass      = "padrao@1234"
@@ -76,6 +76,5 @@ Vagrant.configure("2") do |config|
     machine.vm.provision "shell",
       env: {"MSSQLPASS" => $mssqlpass},
       inline: $script
-
   end
 end
